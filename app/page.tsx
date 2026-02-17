@@ -21,6 +21,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center h-screen text-center px-8">
         <h2 className="text-5xl font-light mb-4">Junior Full Stack Developer</h2>
+
+        <h3 className="text-2xl font-light mb-5">(website in W.I.P. for more info see my <a href="https://www.linkedin.com/in/marco-battisti-kb4/" className="text-gray-400 hover:text-white">LinkedIn</a>)</h3>
+
         <p className="text-lg text-gray-300 max-w-2xl">
           Passionate about building modern web & desktop applications with clean code and innovative solutions.
         </p>
@@ -82,7 +85,7 @@ export default function Home() {
             </div>
 
             <div className="border border-gray-700 p-6 rounded">
-              <h4 className="text-2xl mb-4">Project 2: Midgnight</h4>
+              <h4 className="text-2xl mb-4">Project 2: Midnight</h4>
               <p className="text-gray-300 mb-4">
                 A windows / mobile application, powered with AI to enhance daily routine madw with the Electron JS framework for the client and python (still under W.I.P.) for the server side & AI agents
               </p>
@@ -110,7 +113,7 @@ export default function Home() {
           </p>
           <div className="space-x-6">
             <a href="mailto:your.marco.battisti004@gmail.com" className="text-gray-400 hover:text-white">Email</a>
-            {/* <a href="https://linkedin.com/in/" className="text-gray-400 hover:text-white">LinkedIn</a> */}
+            <a href="https://www.linkedin.com/in/marco-battisti-kb4/" className="text-gray-400 hover:text-white">LinkedIn</a>
             <a href="https://github.com/KemonoBAT4" className="text-gray-400 hover:text-white">GitHub</a>
           </div>
         </div>
