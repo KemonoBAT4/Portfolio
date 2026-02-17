@@ -2,64 +2,124 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-black text-white font-sans">
+
+      {/* Header (Name, surname and nav bar) */}
+      <header className="flex justify-between items-center p-8">
+        <h1 className="text-2xl font-bold">Marco Battisti</h1>
+
+        {/* Top right nav bar */}
+        <nav className="space-x-6">
+          <a href="#about" className="hover:text-gray-400 transition">About</a>
+          <a href="#skills" className="hover:text-gray-400 transition">Skills</a>
+          <a href="#projects" className="hover:text-gray-400 transition">Projects</a>
+          <a href="#contact" className="hover:text-gray-400 transition">Contact</a>
+        </nav>
+
+      </header>
+
+      {/* Hero Section */}
+      <section className="flex flex-col items-center justify-center h-screen text-center px-8">
+        <h2 className="text-5xl font-light mb-4">Junior Full Stack Developer</h2>
+        <p className="text-lg text-gray-300 max-w-2xl">
+          Passionate about building modern web & desktop applications with clean code and innovative solutions.
+        </p>
+        <a href="#projects" className="mt-8 px-6 py-3 bg-white text-black rounded hover:bg-gray-200 transition">
+          View My Work
+        </a>
+      </section>
+      
+
+      {/* About Section */}
+      <section id="about" className="py-20 px-8">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-light mb-8">About Me</h3>
+          <p className="text-gray-300 leading-relaxed">
+            I'm a junior full stack developer with a love for creating user-friendly and efficient web experiences.
+            I specialize in technologies like React, Node.js, and databases. When I'm not coding, I enjoy learning new
+            frameworks and contributing to open-source projects.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-20 px-8 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-light mb-8">Skills</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="text-center">
+              <h4 className="text-xl mb-2">Frontend</h4>
+              <p className="text-gray-400">React, Next.js, Tailwind CSS</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-xl mb-2">Backend</h4>
+              <p className="text-gray-400">Node.js, Express, MongoDB</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-xl mb-2">Tools</h4>
+              <p className="text-gray-400">Git, Docker, VS Code</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-xl mb-2">Other</h4>
+              <p className="text-gray-400">TypeScript, REST APIs</p>
+            </div>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Projects Section (Display: Cardinal, Midnight, Programming-Language) */}
+      <section id="projects" className="py-20 px-8">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-light mb-8">My Projects</h3>
+          <div className="space-y-12">
+
+            <div className="border border-gray-700 p-6 rounded">
+              <h4 className="text-2xl mb-4">Project 1: Cardinal</h4>
+              <p className="text-gray-300 mb-4">
+                A management application that can interact with other external application and manage different realities made with python, Flask, and sqlalchemy
+              </p>
+              <a href="#" className="text-gray-400 hover:text-white">View on GitHub</a>
+            </div>
+
+            <div className="border border-gray-700 p-6 rounded">
+              <h4 className="text-2xl mb-4">Project 2: Midgnight</h4>
+              <p className="text-gray-300 mb-4">
+                A windows / mobile application, powered with AI to enhance daily routine madw with the Electron JS framework for the client and python (still under W.I.P.) for the server side & AI agents
+              </p>
+              <a href="#" className="text-gray-400 hover:text-white">View on GitHub</a>
+            </div>
+
+            <div className="border border-gray-700 p-6 rounded">
+              <h4 className="text-2xl mb-4">Project 3: Programming-Library</h4>
+              <p className="text-gray-300 mb-4">
+                A exapandable Library for programming utility (still under W.I.P.) like functions, utilities classes for different languages and helpfull explenations for different topics made with Node Js Express for the client & C# DOTNET for the server side
+              </p>
+              <a href="#" className="text-gray-400 hover:text-white">View on GitHub</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 px-8 bg-gray-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-3xl font-light mb-8">Get In Touch</h3>
+          <p className="text-gray-300 mb-8">
+            Interested in collaborating? Let's connect!
+          </p>
+          <div className="space-x-6">
+            <a href="mailto:your.marco.battisti004@gmail.com" className="text-gray-400 hover:text-white">Email</a>
+            {/* <a href="https://linkedin.com/in/" className="text-gray-400 hover:text-white">LinkedIn</a> */}
+            <a href="https://github.com/KemonoBAT4" className="text-gray-400 hover:text-white">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-8 text-center text-gray-500">
+        <p>&copy; 2026 Marco Battisti. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
