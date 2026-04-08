@@ -19,6 +19,33 @@
   }
 }
 
+/* A Few Themes (maybe add light theme) */
+[data-theme="minimal"] {
+  --bg: #000000;
+  --bg-secondary: #111111;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+  --border: #374151;
+  --btn-bg: #ffffff;
+  --btn-text: #000000;
+  --btn-hover: #e5e7eb;
+}
+
+[data-theme="vaporwave"] {
+  --bg: #0d0019;
+  --bg-secondary: #1a0033;
+  --text: #f0aaff;
+  --text-muted: #a78bfa;
+  --border: #7c3aed;
+  --btn-bg: linear-gradient(135deg, #ff6ec7, #7b2ff7);
+  --btn-text: #ffffff;
+  --btn-hover: #ff6ec7;
+
+  /* effetto glow opzionale */
+  --glow: 0 0 10px #ff6ec7, 0 0 20px #7b2ff7;
+}
+
+
 /* Nasconde scrollbar ma mantiene lo scroll */
 
 /* Chrome, Safari, Edge */
