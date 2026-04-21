@@ -1,25 +1,59 @@
 # Portfolio
-This is the repository for a personal website made to share some personal infos, my CV, and some of my current active projects
 
-<!-- ## Showcase -->
+This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
 
-## Getting Started
-This project is mainly for showcasing how the website is structured, but if you want to use this project as a template for your own, here's how you can download, install & run the project:
- - clone the repo `git clone https://github.com/KemonoBAT4/Portfolio.git`
- - enter the cloned repo `cd Portfolio`
- - install the dependencies `npm install`
- - run the project:
-   - dev mode `npm run dev`
-   - prod mode `npm run prod`
- - the default port is `3000`
+## Development server
 
-<!-- ## Repository Layout -->
+To start a local development server, run:
 
-## Branches
-Here's the current explenation of all the branches in the repository
- - `main`: the main branch for the current live project
- - `dev`: the dev branch for the development, with untested features or possible bugs
- - `release-1.0` the first release of the project
+```bash
+ng serve
+```
 
-## Future updates
-At the moment, I believe the project is too static, as there are no simple methods for updating the website with new data without directly modifying the code. Therefore, I plan to create a dedicated server to store all data and personal information and add the ability to create, update, or delete records more easily.
+Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Code scaffolding
+
+Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+
+```bash
+ng generate component component-name
+```
+
+For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+
+```bash
+ng generate --help
+```
+
+## Building
+
+To build the project run:
+
+```bash
+ng build
+```
+
+This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+
+## Running unit tests
+
+To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+
+```bash
+ng test
+```
+
+## Running end-to-end tests
+
+For end-to-end (e2e) testing, run:
+
+```bash
+ng e2e
+```
+
+Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+
+## Additional Resources
+
+For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
