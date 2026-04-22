@@ -1,0 +1,20 @@
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.header-container {
+    width: 100%;
+    height: 6%;
+    background-color: green;
+}
+
+.content-container {
+    width: 100%;
+    height: 94%;
+    background-color: blue;
+}
