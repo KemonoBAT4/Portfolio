@@ -3,14 +3,13 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
 }
 
 /* ---------- header title ---------- */
 
 .header-title-container {
-    width: 40%;
+    width: 65%;
     height: 100%;
     display: flex;
     justify-content: start;
@@ -27,3 +26,21 @@
 }
 
 /* ---------- header title ---------- */
+
+
+/* ---------- header links---------- */
+
+.header-links-container {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-link-item {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* ---------- header links ---------- */

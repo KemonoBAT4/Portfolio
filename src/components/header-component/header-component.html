@@ -5,7 +5,9 @@
     </div>
 
     <div class="header-links-container">
-
+        @for (item of header_items_list; track item.label) {
+            <app-header-link-item-component [item]="item" class="header-link-item"></app-header-link-item-component>
+        }
     </div>
 
     <!-- reach me buttons (github & linkedin) -->
