@@ -4,17 +4,18 @@
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background-color: red;
+
+    background-color: #0d1117;
 }
 
 .header-container {
     width: 100%;
     height: 6%;
-    background-color: green;
+
+    background-color: #21262d;
 }
 
 .content-container {
     width: 100%;
     height: 94%;
-    background-color: blue;
 }
