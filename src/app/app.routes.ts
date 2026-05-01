@@ -18,13 +18,18 @@ export const routes: Routes = [
     },
     {
         // about me
-        path: 'about',
+        path: 'roadmap',
         component: Aboutpage
     },
     {
         // projects
         path: 'projects',
         component: Projectpage
+    },
+    {
+        // about me
+        path: 'about',
+        component: Aboutpage
     },
     {
         // projects view info
