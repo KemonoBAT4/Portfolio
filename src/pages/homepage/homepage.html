@@ -1,0 +1,24 @@
+<div class="homepage-container">
+
+    <div class="homepage-introduction-container">
+        HERO work in progress
+    </div>
+
+    <div class="homepage-skills-roadmap-container">
+        <span class="section-title">Skills Roadmap</span>
+        <div class="homepage-skills-roadmap-items-container">
+            <app-skills-component></app-skills-component>
+        </div>
+    </div>
+
+    <div class="homepage-featured-projects-container">
+        <div class="homepage-featured-projects-title-container">
+            <span class="section-title">Featured Projects</span>
+        </div>
+        <div class="homepage-featured-projects-items-container">
+            @for (project of projects(); track $index; let i = $index) {
+                <app-projects-component style="height: auto;" [project]="project" [index]="i"></app-projects-component>
+            }
+        </div>
+    </div>
+</div>
