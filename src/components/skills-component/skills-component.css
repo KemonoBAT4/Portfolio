@@ -2,6 +2,8 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   overflow-x: auto;
+
+  height: 100%;
 }
 
 /* ---- Rows ---- */
@@ -26,7 +28,7 @@
 .node {
   position: relative;
   z-index: 1;
-  width: 231px;
+  width: 205px;
   height: 150px;
   display: flex;
   flex-direction: column;
