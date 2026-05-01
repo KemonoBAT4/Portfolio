@@ -24,8 +24,8 @@ export class HeaderLinkItemComponent implements OnInit {
 
     // #endregion ---------- COMPONENT'S CONSTRUCTOR & INIT ---------- # //
 
-    // #region    ---------- UTILITIES ---------- # //
 
+    // #region    ---------- UTILITIES ---------- # //
     isActive() {
         return this.router.url === this.item().href;
     }

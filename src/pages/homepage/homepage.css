@@ -1,0 +1,115 @@
+.homepage-container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #191C21;
+    overflow-y: auto;
+}
+
+.homepage-container {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.homepage-container::-webkit-scrollbar {
+  display: none;
+}
+
+.homepage-introduction-container {
+    width: 100%;
+    min-height: 20%;
+    height: 20%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homepage-skills-roadmap-container {
+    width: 80%;
+    min-height: 50%;
+    /* height: 550px; */
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: start;
+    align-items: flex-start;
+    text-align: start;
+
+    margin-bottom: 23px;
+}
+
+.homepage-skills-roadmap-items-container {
+    width: 100%;
+    overflow-y: auto;
+}
+
+.homepage-featured-projects-container {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.homepage-featured-projects-title-container {
+    width: 80%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-bottom: 23px;
+}
+
+.homepage-featured-projects-items-container {
+    width: 100%;
+    height: 90%;
+
+    padding: 1%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 640px) {
+    .homepage-featured-projects-items-container {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left : 15px;
+        padding-right: 15px;
+
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 641px) {
+    .homepage-featured-projects-items-container {
+        grid-template-columns: repeat(4, 1fr);
+
+        margin-bottom: 15px;
+    }
+}
+
+.section-title {
+
+    width: 100%;
+    padding-bottom: 1rem;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-top: 2rem;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}

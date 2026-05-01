@@ -1,18 +1,31 @@
 <div class="header-container">
+    <div class="header-top-bar">
+        <div class="header-title-container">
+            <span class="header-title" (click)="goHome()">{{title()}}</span>
+        </div>
 
-    <div class="header-title-container">
-        <span class="header-title" (click)="goHome()">{{title()}}</span>
+        <button class="hamburger" (click)="menuOpen.set(!menuOpen())">
+            <i class="pi" [class.pi-bars]="!menuOpen()" [class.pi-times]="menuOpen()"></i>
+        </button>
     </div>
 
-    <div class="header-links-container">
-        @for (item of header_items_list; track item.label) {
-            <app-header-link-item-component [item]="item" class="header-link-item"></app-header-link-item-component>
-        }
-    </div>
+    <div class="header-nav" [class.open]="menuOpen()">
+        <div class="header-links-container">
+            @for (item of header_items_list; track item.label) {
+                <app-header-link-item-component [item]="item" class="header-link-item"></app-header-link-item-component>
+            }
 
-    <!-- reach me buttons (github & linkedin) -->
-    <div class="header-reach-container">
-        <!-- <i class="pi pi-github"></i> -->
-    </div>
+            <div class="sliding-indicator"
+                [style.width.px]="indicatorWidth()"
+                [style.transform]="'translateX(' + indicatorLeft() + 'px)'">
+            </div>
+        </div>
 
+        <div class="header-reach-container">
+            <button class="header-reach-contact-button" (click)="goContactMe()">Contact</button>
+
+            <i id="header-reach-social-icons" (click)="goGithub()"   class="pi pi-github"></i>
+            <i id="header-reach-social-icons" (click)="goLinkedin()" class="pi pi-linkedin"></i>
+        </div>
+    </div>
 </div>
