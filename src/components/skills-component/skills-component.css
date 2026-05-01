@@ -1,0 +1,206 @@
+.roadmap-wrapper {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  overflow-x: auto;
+}
+
+/* ---- Rows ---- */
+.track {
+  display: flex;
+  align-items: stretch;
+  min-width: max-content;
+  position: relative;
+}
+.track::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--color-border-secondary, rgba(255,255,255,0.15));
+  z-index: 0;
+}
+
+/* ---- Cards ---- */
+.node {
+  position: relative;
+  z-index: 1;
+  width: 231px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  background: #1E252B;
+  border: 0.5px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px 8px 8px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  opacity: 1;
+}
+.node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+}
+.node.node--pending {
+  opacity: 0.45;
+}
+.node.node--pending:hover {
+  opacity: 0.8;
+}
+
+/* ---- Card internals ---- */
+.node__bar {
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+.node__step {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+.node__name {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.node__desc {
+  font-size: 10px;
+  line-height: 1.4;
+  flex: 1;
+  opacity: 0.6;
+}
+.node__badge {
+  margin-top: 8px;
+  align-self: flex-start;
+  font-size: 9px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* ---- Divider ---- */
+.track-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 14px 6px;
+}
+.track-divider__line {
+  flex: 1;
+  height: 0.5px;
+  background: rgba(255,255,255,0.1);
+}
+.track-divider__label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.4;
+}
+
+/* ---- Hard Skills — teal ---- */
+.track--hard .node__bar   { background: #1D9E75; }
+.track--hard .node__step  { color: #5DCAA5; }
+.track--hard .node__badge { background: #085041; color: #9FE1CB; }
+
+/* ---- Soft Skills — purple ---- */
+.track--soft .node__bar   { background: #7F77DD; }
+.track--soft .node__step  { color: #AFA9EC; }
+.track--soft .node__badge { background: #26215C; color: #CECBF6; }
+
+
+@media (max-width: 640px) {
+
+  .roadmap-wrapper {
+    padding: 1rem 0.5rem;
+    overflow-x: visible;
+  }
+
+  /* Le due track diventano colonne affiancate */
+  .track {
+    flex-direction: column;
+    min-width: unset;
+    width: 100%;
+  }
+  .track::before {
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: auto;
+    width: 1px;
+    height: 100%;
+  }
+
+  /* Le card si allargano a tutta colonna */
+  .node {
+    width: 100%;
+    margin: 0 0 8px 0;
+  }
+
+  /* Le due track vanno affiancate */
+  .roadmap-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tracks-columns {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .track {
+    flex: 1;
+  }
+
+  /* Divider diventa solo un separatore orizzontale */
+  .track-divider {
+    display: none;
+  }
+
+  /* Label sopra ogni colonna */
+  .track-label {
+    display: block;
+    margin-bottom: 8px;
+  }
+}
+
+
+.tracks-columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.track-column {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Su desktop la track rimane orizzontale con overflow */
+@media (min-width: 641px) {
+  .tracks-columns {
+      flex-direction: column; gap: 0;
+  }
+
+  .track-column {
+      width: 100%;
+  }
+
+  .track {
+      flex-direction: row; overflow-x: auto;
+  }
+
+  .track-label {
+      margin-top: 16px;
+      margin-bottom: 8px;
+  }
+}

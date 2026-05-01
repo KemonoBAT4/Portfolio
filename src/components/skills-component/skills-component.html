@@ -1,1 +1,35 @@
-<p>skills-component works!</p>
+<div class="roadmap-wrapper">
+  <div class="tracks-columns">
+
+    <div class="track-column">
+      <div class="track-label hard-label">Hard Skills</div>
+      <div class="track track--hard">
+        @for (skill of hardSkills(); track $index; let i = $index) {
+          <div class="node" [class.node--pending]="!skill.done">
+            <div class="node__bar"></div>
+            <div class="node__step">0{{ i + 1 }}</div>
+            <div class="node__name">{{ skill.label }}</div>
+            <div class="node__desc">{{ skill.description }}</div>
+            <div class="node__badge">{{ skill.done ? 'Completato' : 'In corso' }}</div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="track-column">
+      <div class="track-label soft-label">Soft Skills</div>
+      <div class="track track--soft">
+        @for (skill of softSkills(); track $index; let i = $index) {
+          <div class="node" [class.node--pending]="!skill.done">
+            <div class="node__bar"></div>
+            <div class="node__step">0{{ i + 1 }}</div>
+            <div class="node__name">{{ skill.label }}</div>
+            <div class="node__desc">{{ skill.description }}</div>
+            <div class="node__badge">{{ skill.done ? 'Completato' : 'In corso' }}</div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</div>
