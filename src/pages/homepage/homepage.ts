@@ -40,7 +40,7 @@ export class Homepage {
                 { label: 'CSS'       , color: '#c300ff' },
                 { label: 'Javascript', color: '#f8df00' },
             ],
-            imageUrl: '/assets/projects-template.jpg',
+            imageUrl: '/assets/midnight.png',
             projectUrl: 'https://github.com/KemonoBAT4/Midnight',
             repoUrl: 'https://github.com/KemonoBAT4/Midnight.'
         },
