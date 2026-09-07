@@ -37,13 +37,12 @@ export class HeaderComponent implements OnInit {
     // that fetches the data from an api / database, need to think which
     // is the best for making the edit of this webiste more easy
     header_items_list: Array<{ label: string, href: string }>  = [
-        { label: "Home"    , href: "#" }, // href: "/home"     },
-        { label: "Roadmap" , href: "#" }, // href: "/roadmap"  },
-        { label: "Projects", href: "#" }, // href: "/projects" },
-        { label: "About"   , href: "#" } // href: "/about"    }
+        { label: "Home"    , href: "/home"     },
+        { label: "Projects", href: "/projects" },
+        { label: "About"   , href: "/about"    }
     ]
 
-    // #endregion ---------- VARIABLES ---------- # //  
+    // #endregion ---------- VARIABLES ---------- # //
 
 
     // #region    ---------- COMPONENT'S CONSTRUCTOR & INIT ---------- # //
@@ -61,6 +60,7 @@ export class HeaderComponent implements OnInit {
         // inits the indicator by updating the first position
         afterNextRender(() => this.updateIndicator());
     }
+
     ngOnInit() { }
 
     // #endregion ---------- COMPONENT'S CONSTRUCTOR & INIT ---------- # //
