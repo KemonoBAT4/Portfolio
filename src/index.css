@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  @apply bg-bg text-text font-body antialiased;
+  background-image:
+    linear-gradient(rgba(231, 233, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(231, 233, 238, 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+  background-position: center top;
+}
+
+/* soft radial accent glows, positioned per-section via .glow-top / .glow-bottom */
+.glow {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+.glow::before {
+  content: "";
+  position: absolute;
+  width: 640px;
+  height: 640px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(242, 169, 59, 0.16) 0%, rgba(242, 169, 59, 0) 70%);
+  filter: blur(10px);
+}
+.glow-hero::before {
+  top: -260px;
+  right: -160px;
+}
+.glow-contact::before {
+  bottom: -260px;
+  left: -200px;
+  background: radial-gradient(circle, rgba(110, 231, 200, 0.12) 0%, rgba(110, 231, 200, 0) 70%);
+}
+
+::selection {
+  background: rgba(242, 169, 59, 0.28);
+  color: #fff;
+}
+
+/* visible keyboard focus, everywhere */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #f2a93b;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #12141b;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2f3d;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a4054;
+}
+
+.eyebrow {
+  @apply font-mono text-accent text-sm tracking-wide;
+}
+
+.editor-dot {
+  @apply inline-block w-[10px] h-[10px] rounded-full;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
