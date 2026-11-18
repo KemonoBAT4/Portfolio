@@ -147,6 +147,20 @@ export const content: Record<Lang, SiteContent> = {
           branch: "dev",
           repo: "https://github.com/KemonoBAT4/HomePilot",
         },
+        {
+          file: "MastroDiChiavi.py",
+          name: "MastroDiChiavi",
+          tagline: "Un password manager privato con server locale + mobile app",
+          description: "Un programma sviluppato in Python con FastAPI per il server e Typescript Angular per il client Mobile che permette la gestione di password con zero-knowledge da parte del server",
+          features: [
+            "Gestione centralizzata delle password",
+            "Zero-knowledge da parte del server (i dati arrivano gia cryptati sul server, che si limita a salvarli in un vault apposito",
+            "Applicazione Mobile",
+          ],
+          tags: ["Python", "FastAPI", "SQLlite", "Typescript", "Angular", "Mobile"],
+          branch: "main",
+          repo: "https://github.com/KemonoBAT4/MastroDiChiavi",
+        },
       ],
     },
     stack: {
@@ -256,6 +270,20 @@ export const content: Record<Lang, SiteContent> = {
           tags: ["Python", "FastAPI", "PostgreSQL", "React"],
           branch: "dev",
           repo: "https://github.com/KemonoBAT4/HomePilot",
+        },
+        {
+          file: "MastroDiChiavi.py",
+          name: "MastroDiChiavi",
+          tagline: "A private password manager with a local server + mobile app",
+          description: "A program that allows to manage password with a zero-knowledge private server made in Python & FastAPI and a mobile app made in Typescript & Angular",
+          features: [
+            "Centralized password management",
+            "Server with Zero-knowledge about the passwords saved (the data is sent encrypted by the client) to a specific custom vault",
+            "Mobile Application"
+          ],
+          tags: ["Python", "FastAPI", "SQLlite", "Typescript", "Angular", "Mobile"],
+          branch: "main",
+          repo: "https://github.com/KemonoBAT4/MastroDiChiavi",
         },
       ],
     },
